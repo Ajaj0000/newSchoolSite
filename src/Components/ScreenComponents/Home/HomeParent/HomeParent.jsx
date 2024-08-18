@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navbar } from "../../../CommonComponents/Navbar";
 import { Banner } from "../HomeChild/Banner";
 import { Service } from "../HomeChild/Service";
@@ -10,6 +10,11 @@ import { Footer } from "../../../CommonComponents/Footer";
 import { SocialSection } from "../HomeChild/SocialSection";
 
 function HomeParent() {
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[]);
+    
     return (
         <>
             <Navbar />

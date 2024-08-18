@@ -120,8 +120,6 @@ function GalleryPhoto() {
                                     )
                                 })
                             }
-
-
                         </div>
                     </div>
                 </div>
@@ -129,7 +127,7 @@ function GalleryPhoto() {
             {
                 isOpenImage && (
                     <div className="modal fade show" id="image-gallery" style={{ display:'block' }}>
-                        <div className="modal-dialog modal-lg" >
+                        <div className="modal-dialog modal-lg" style={{width:"570px"}}>
                             <div className="modal-content">
                                 <div className="modal-header">
                                     {/* <h5 className="modal-title sm-sub-title"></h5> */}
