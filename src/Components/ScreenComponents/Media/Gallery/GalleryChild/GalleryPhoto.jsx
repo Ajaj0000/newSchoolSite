@@ -4,6 +4,9 @@ import { galleryData } from "../../../../../Utilities/GalleryData";
 
 function GalleryPhoto() {
 
+    const [galleryPic, setGalleryPic] = useState(galleryData)
+    const [galleryPicFilter, setGalleryPicFilter] = useState([...galleryPic])
+
     const [isOpenImage, setIsOpenImage] = useState(false)
     const [currentImage, setCurrentImage] = useState(null)
 
@@ -20,9 +23,58 @@ function GalleryPhoto() {
         setIsOpenImage(false)
     };
 
+    const filterData =(e)=>{
+        const getFilter = galleryPic.filter((itm)=> itm.category === e)
+        // setGalleryPic(getFilter)
+        setGalleryPicFilter(getFilter)
+    };
+    const all =()=>{
+        setGalleryPicFilter(galleryPic)
+    };
+
+    const [activity, setActivity] = useState(false)
+    const [alll, setalll] =useState(true)
+    const [sports, setSports] = useState(false)
+    const [videos, setVideos] = useState(false)
+    const [cultural, setCultural] = useState(false)
+
+    const alllStatus =()=>{
+        setalll(true)
+        setSports(false)
+        setVideos(false)
+        setCultural(false)
+        setActivity(false)
+    };
+    const activetyStatus =()=>{
+        setActivity(true)
+        setalll(false)
+        setSports(false)
+        setVideos(false)
+        setCultural(false)
+    };
+    const sportsStatus=()=>{
+        setSports(true)
+        setActivity(false)
+        setalll(false)
+        setVideos(false)
+        setCultural(false)
+    };
+    const culturalStatus=()=>{
+        setCultural(true)
+        setalll(false)
+        setSports(false)
+        setVideos(false)
+        setActivity(false)
+    };
+    const videoStatus=()=>{
+        setActivity(false)
+        setCultural(false)
+        setalll(false)
+        setSports(false)
+        setVideos(true)
+    };
+
     
-
-
     return (
         <>
             <section className="featured-section-3 section-ptb-3 aos-init aos-animate" data-aos="fade-up">
@@ -32,19 +84,18 @@ function GalleryPhoto() {
                             <div className="col-md-12 mx-auto text-center mb-5">
                                 <div className="portfolios-list-2">
                                     <ul>
-                                        <li className="active button_four filter-button" data-filter="all">All</li>
-                                        <li className="button_four filter-button" data-filter="sports">Sports</li>
-                                        <li className="button_four filter-button" data-filter="activities">Activities</li>
-                                        <li className="button_four filter-button" data-filter="cultural_activities">Cultural
-                                            Activities</li>
-                                        <li className="button_four filter-button" data-filter="videos">Videos</li>
+                                        <li className={`${alll ? 'active' : ''} button_four filter-button`} onClick={()=>{all(); alllStatus()}} >All</li>
+                                        <li className={`${sports ? 'active' : ''} button_four filter-button`} onClick={(e)=>{filterData("SPORTS"); sportsStatus() }} >Sports</li>
+                                        <li className={`${activity ? 'active' : ''} button_four filter-button`} onClick={(e)=>{filterData("ACTIVITIES") ; activetyStatus()}} >Activities</li>
+                                        <li className={`${cultural ? 'active' : ''} button_four filter-button`} onClick={(e)=>{filterData("CULTURAL ACTIVITIES") ; culturalStatus()}} >Cultural Activities</li>
+                                        <li className={`${videos ? 'active' : ''} button_four filter-button`} onClick={(e)=>{filterData("VIDEOS"); videoStatus()}} >Videos</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             {
-                                galleryData.map((itm) => {
+                                galleryPicFilter.map((itm) => {
                                     return (
                                         <>
                                             <div className="col-lg-3 col-sm-6 filter sports p-0 m-0">
@@ -81,7 +132,7 @@ function GalleryPhoto() {
                         <div className="modal-dialog modal-lg" >
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h5 className="modal-title sm-sub-title"></h5>
+                                    {/* <h5 className="modal-title sm-sub-title"></h5> */}
                                     <button type="button" className="close" onClick={closeImage}>
                                         <span aria-hidden="true">×</span>
                                     </button>
