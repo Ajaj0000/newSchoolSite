@@ -94,16 +94,16 @@ function Navbar() {
                                                         Academics
                                                     </Link>
                                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <li><Link className="dropdown-item" >Curriculum</Link></li>
-                                                        <li><Link className="dropdown-item">Activity Planner</Link></li>
+                                                        <li><Link className="dropdown-item" to='/curriculum'>Curriculum</Link></li>
+                                                        <li><Link className="dropdown-item" to='/planner'>Activity Planner</Link></li>
                                                         <li><Link className="dropdown-item" to='/' >Evaluation System</Link></li>
                                                         <li><Link className="dropdown-item" to='/'>Academic Achievments</Link></li>
                                                         <li><Link className="dropdown-item" to='/facilities'>Faculties</Link></li>
                                                         <li><Link className="dropdown-item" to='/'>Teaching Learning Process</Link></li>
                                                         <li><Link className="dropdown-item" to='/'>Affiliation Status</Link></li>
-                                                        <li><Link className="dropdown-item">List OF Books Prescribe</Link></li>
-                                                        <li><Link className="dropdown-item">Annual Report</Link></li>
-                                                        <li><Link className="dropdown-item">Academic Calender</Link></li>
+                                                        <li><Link className="dropdown-item" to='/booksList'>List OF Books Prescribe</Link></li>
+                                                        <li><Link className="dropdown-item" to='/annualReport'>Annual Report</Link></li>
+                                                        <li><Link className="dropdown-item" to='/calander'>Academic Calender</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="nav-item dropdown">
@@ -113,26 +113,26 @@ function Navbar() {
                                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                                         <li><Link className="dropdown-item" to='/'>Events</Link></li>
                                                         <li><Link to='/gallery' className="dropdown-item">Gallery</Link></li>
-                                                        <li><Link className="dropdown-item">News</Link></li>
+                                                        <li><Link className="dropdown-item" to='/news'>News</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="nav-item dropdown">
-                                                    <Link className="nav-link dropdown-toggle" to='/' id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                                    <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                                                         Achievement
                                                     </Link>
                                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <li><Link className="dropdown-item">Academic</Link></li>
+                                                        <li><Link className="dropdown-item" to='/result'>Academic</Link></li>
                                                         <li><Link className="dropdown-item">Sports</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="nav-item dropdown">
-                                                    <Link className="nav-link dropdown-toggle" to='/' id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                                    <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                                                         Admissions
                                                     </Link>
                                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <li><Link className="dropdown-item" to='/'>Admission procedure</Link></li>
-                                                        <li><Link className="dropdown-item" to='/'>Inquiry</Link></li>
-                                                        <li><Link className="dropdown-item" to='/'>Admission fees</Link></li>
+                                                        <li><Link className="dropdown-item" to='/procedure'>Admission procedure</Link></li>
+                                                        <li><Link className="dropdown-item" to='/inquiry'>Inquiry</Link></li>
+                                                        <li><Link className="dropdown-item" to='/fees'>Admission fees</Link></li>
                                                         <li><Link className="dropdown-item" to='/'>Transfer Certificate</Link></li>
                                                     </ul>
                                                 </li>
@@ -144,15 +144,15 @@ function Navbar() {
                                                         <li><Link className="dropdown-item" to='/'>Co-Curriculum Activities</Link></li>
                                                         <li><Link className="dropdown-item" to='/'>Sports &amp; Games</Link></li>
                                                         <li><Link className="dropdown-item" to='/'>Community &amp; Society</Link></li>
-                                                        <li><Link className="dropdown-item" >Houses</Link></li>
+                                                        <li><Link className="dropdown-item" to='/house'>Houses</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className="nav-item dropdown">
-                                                    <Link className="nav-link dropdown-toggle" to='/' id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                                    <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                                                         CBSE
                                                     </Link>
                                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <li><Link className="dropdown-item" >Mandatory Disclosure</Link></li>
+                                                        <li><Link className="dropdown-item" to='/mandatory'>Mandatory Disclosure</Link></li>
                                                         <li><Link className="dropdown-item" >Affiliation Copy</Link></li>
                                                     </ul>
                                                 </li>
