@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import g1 from "../../../../Assets/Image/2b903e7a-818f-4b0b-bb9e-11813275f128.jpg";
 import g2 from "../../../../Assets/Image/3d2270c4-2f84-49f5-9f67-5891692ca108.jpg";
 import g3 from '../../../../Assets/Image/3db2c235-f904-4bde-a4de-8f31fbaa6f2d.jpg';
